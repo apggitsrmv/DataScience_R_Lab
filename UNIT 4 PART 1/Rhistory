@@ -1,0 +1,512 @@
+{
+if(n%%i==0)
+{
+s=s+i
+}
+i=i+1
+}
+if(s == n){
+print(paste("The given number is perfect :",n))
+}else{
+print(paste("The given number is not perfect :",n))
+}
+n = as.integer(readline(prompt = "Enter a number :" ))
+i = 1
+s = 0
+while(i<n)
+{
+if(n%%i==0)
+{
+s=s+i
+}
+i=i+1
+}
+if(s == n){
+print(paste("The given number is perfect :",n))
+}else{
+print(paste("The given number is not perfect :",n))
+}
+n = as.integer(readline(prompt = "Enter a number :" ))
+i = 1
+n = as.integer(readline(prompt = "Enter a number :" ))
+i = 1
+s = 0
+while(i<n)
+{
+if(n%%i==0)
+{
+s=s+i
+}
+i=i+1
+}
+if(s == n){
+print(paste("The given number is perfect :",n))
+}else{
+print(paste("The given number is not perfect :",n))
+}
+num = as.integer(readline(prompt="Enter a number: "))
+temp = num
+while(temp > 0) {
+digit = temp %% 10
+sum = sum + (digit ^ 3)
+temp = floor(temp / 10)
+}
+# display the result
+if(num == sum) {
+print(paste(num, "is an Armstrong number"))
+} else {
+print(paste(num, "is not an Armstrong number"))
+}
+num = as.integer(readline(prompt="Enter a number: "))
+sum = 0
+temp = num
+while(temp > 0) {
+digit = temp %% 10
+sum = sum + (digit ^ 3)
+temp = floor(temp / 10)
+}
+# display the result
+if(num == sum) {
+print(paste(num, "is an Armstrong number"))
+} else {
+print(paste(num, "is not an Armstrong number"))
+}
+num = as.integer(readline(prompt="Enter a number: "))
+sum = 0
+temp = num
+while(temp > 0) {
+digit = temp %% 10
+sum = sum + (digit ^ 3)
+temp = floor(temp / 10)
+}
+# display the result
+if(num == sum) {
+print(paste(num, "is an Armstrong number"))
+} else {
+print(paste(num, "is not an Armstrong number"))
+}
+num = as.integer(readline(prompt="Enter a number: "))
+choice = as.integer(readline(prompt="Enter choice[1/2/3/4]: "))
+num2<-as.double(readline(prompt="Enter second number: "))
+result <- switch(choice, (num1+num2), (num1-num2), (num1*num2), (num1/num2))
+print(paste("The Result is: ", result))
+num = as.integer(readline(prompt="Enter a number: "))
+choice = as.integer(readline(prompt="Enter choice[1/2/3/4]: "))
+choice = as.integer(readline(prompt="Enter choice[1/2/3/4]: "))
+num1<-as.double(readline(prompt="Enter first number: "))
+num2<-as.double(readline(prompt="Enter second number: "))
+result <- switch(choice, (num1+num2), (num1-num2), (num1*num2), (num1/num2))
+print(paste("The Result is: ", result))
+d <- data.frame(label = rep("tbd", 5))
+d$label[[2]] <- "north"
+d <- data.frame(label = rep("tbd", 5))
+d$label[[2]] <- "north"
+str(d)
+d <- data.frame(label = rep("tbd", 5),stringsAsFactors = FALSE)
+d$label[[2]] <- "north"
+str(d)
+data <- c("East","West","East","North","North","East","West","West","West","East","North")
+print(data)
+print(is.factor(data))
+factor_data <- factor(data)
+print(factor_data)
+print(is.factor(factor_data))
+height <- c(132,151,162,139,166,147,122)
+weight <- c(48,49,66,53,67,52,40)
+gender <- c("male","male","female","female","male","female","male")
+# Create the data frame.
+input_data <- data.frame(height,weight,gender)
+print(input_data)
+# Test if the gender column is a factor.
+print(is.factor(input_data$gender))
+# Print the gender column so see the levels.
+print(input_data$gender)
+print(factor(input_data$gender))
+data <- c("East","West","East","North","North","East","West",
+"West","West","East","North")
+# Create the factors
+factor_data <- factor(data)
+print(factor_data)
+# Apply the factor function with required order of the level.
+new_order_data <- factor(factor_data,levels = c("East","West","North"))
+print(new_order_data)
+data <- c("East","West","East","North","North","East","West",
+"West","West","East","North")
+# Create the factors
+factor_data <- factor(data)
+print(factor_data)
+# Apply the factor function with required order of the level.
+new_order_data <- factor(factor_data,levels = c("East","West","North"))
+print(new_order_data)
+library(MASS)
+ships
+data()
+H <- c(7,12,28,3,41)
+barplot(H)
+H <- c(7,12,28,3,41)
+M <- c("Mar","Apr","May","Jun","Jul")
+barplot(H,names.arg=M,xlab="Month",ylab="Revenue",col="blue",
+main="Revenue chart",border="red")
+png(file = "barchart_months_revenue.png")
+# Plot the bar chart
+barplot(H,names.arg=M,xlab="Month",ylab="Revenue",col="blue",
+main="Revenue chart",border="red")
+# Save the file
+dev.off()
+png(file = "E:/MCA/charts and graphs/barchart_months_revenue.png")
+# Plot the bar chart
+barplot(H,names.arg=M,xlab="Month",ylab="Revenue",col="blue",
+main="Revenue chart",border="red")
+# Save the file
+dev.off()
+install.packages("RMySQL")
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = '', dbname = 'sakila',
+host = 'localhost')
+# List the tables available in this database.
+dbListTables(mysqlconnection)
+library(RMySQL)
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = '', dbname = 'sakila',
+host = 'localhost')
+# List the tables available in this database.
+dbListTables(mysqlconnection)
+library(RMySQL)
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = '', dbname = 'sakila',
+host = 'localhost')
+library(RMySQL)
+data()
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = '', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(MySQL, user = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(MySQL, user = 'root', password = '', dbname = 'sakila',
+host = 'localhost')
+library(RMySQL)
+mysqlconnection = dbConnect(MySQL, user = 'root', password = '', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(MySQL(), user = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+drv <- dbDriver("MySQL")
+drv <- dbDriver("MySQL")
+mysqlconnection = dbConnect(drv, user = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(drv, username = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+library(DBI)
+library(RMySQL)
+library(DBI)
+drv <- dbDriver("MySQL")
+drv <- dbDriver("MySQL")
+mysqlconnection = dbConnect(drv, username = 'root', password = 'root', dbname = 'sakila',
+host = 'Mysql@localhost')
+drv <- dbDriver("MySQL")
+mysqlconnection = dbConnect(drv, username = 'root', password = 'root', dbname = 'sakila',
+host = '127.0.0.1:3306')
+mysqlconnection = dbConnect(drv, username = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+drv <- dbDriver("MySQL80")
+drv <- dbDriver("MySQL")
+mysqlconnection = dbConnect(drv, username = 'root', password = 'root', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(drv, username = 'rmsridhar', password = 'srid_1968', dbname = 'sakila',
+host = 'localhost')
+mysqlconnection = dbConnect(drv, username = 'rmsridhar', password = 'srid_1968', dbname = 'sakila',
+host = 'localhost')
+dbListTables(mysqlconnection)
+result = dbSendQuery(mysqlconnection, "select * from actor")
+dbListTables(mysqlconnection)
+drv <- dbDriver("MySQL")
+mysqlconnection = dbConnect(drv, username = 'rmsridhar', password = 'srid_1968', dbname = 'sakila',
+host = 'localhost')
+# List the tables available in this database.
+dbListTables(mysqlconnection)
+result = dbSendQuery(mysqlconnection, "select * from actor")
+data.frame = fetch(result, n = 5)
+print(data.fame)
+data.frame = fetch(result, n = 5)
+print(data.frame)
+result = dbSendQuery(mysqlconnection, "select * from actor where last_name = 'TORN'")
+# Fetch all the records(with n = -1) and store it as a data frame.
+data.frame = fetch(result, n = -1)
+print(data)
+data.frame = fetch(result, n = -1)
+print(data.frame)
+data.frame = fetch(result)
+print(data.frame)
+result = dbSendQuery(mysqlconnection, "select * from actor where last_name = 'TORN'")
+# Fetch all the records(with n = -1) and store it as a data frame.
+data.frame = fetch(result,n=3)
+print(data.frame)
+result = dbSendQuery(mysqlconnection, "select * from actor where last_name = 'TORN'")
+# Fetch all the records(with n = -1) and store it as a data frame.
+data.frame = fetch(result,n=-1)
+print(data.frame)
+result = dbSendQuery(mysqlconnection, "select * from actor where last_name = 'TORN'")
+# Fetch all the records(with n = -1) and store it as a data frame.
+data.frame = fetch(result)
+print(data.frame)
+mtcars
+merged.Pima <- merge(x = Pima.te, y = Pima.tr,
+by.x = c("bp", "bmi"),
+by.y = c("bp", "bmi")
+)
+print(merged.Pima)
+library(MASS)
+merged.Pima <- merge(x = Pima.te, y = Pima.tr,
+by.x = c("bp", "bmi"),
+by.y = c("bp", "bmi")
+)
+print(merged.Pima)
+nrow(merged.Pima)
+Pima.te
+Pima.tr
+seq_along(6)
+seq(6)
+x <- c(21, 62, 10, 53)
+labels <- c("London", "New York", "Singapore", "Mumbai")
+# Give the chart file a name.
+#png(file = "city.png")
+# Plot the chart.
+pie(x,labels)
+pie(x, labels, main = "City pie chart", col = rainbow(length(x)))
+x <-  c(21, 62, 10,53)
+labels <-  c("London","New York","Singapore","Mumbai")
+piepercent<- round(100*x/sum(x), 1)
+# Give the chart file a name.
+#png(file = "city_percentage_legends.jpg")
+# Plot the chart.
+pie(x, labels = piepercent, main = "City pie chart",col = rainbow(length(x)))
+legend("topright", c("London","New York","Singapore","Mumbai"), cex = 0.8,
+fill = rainbow(length(x)))
+library(plotrix)
+# Create data for the graph.
+x <-  c(21, 62, 10,53)
+lbl <-  c("London","New York","Singapore","Mumbai")
+# Give the chart file a name.
+#png(file = "3d_pie_chart.jpg")
+# Plot the chart.
+pie3D(x,labels = lbl,explode = 0.1, main = "Pie Chart of Countries ")
+install.packages("plotrix")
+library(plotrix)
+# Create data for the graph.
+x <-  c(21, 62, 10,53)
+lbl <-  c("London","New York","Singapore","Mumbai")
+# Give the chart file a name.
+#png(file = "3d_pie_chart.jpg")
+# Plot the chart.
+pie3D(x,labels = lbl,explode = 0.1, main = "Pie Chart of Countries ")
+x <-  c(21, 62, 10,53)
+lbl <-  c("London","New York","Singapore","Mumbai")
+# Give the chart file a name.
+#png(file = "3d_pie_chart.jpg")
+# Plot the chart.
+pie3D(x,labels = lbl,explode = 0.1, main = "Pie Chart of Countries ")
+pie3D(x,labels=lbl,explode = 0.1, main = "Pie Chart of Countries ",)
+legend("topright", c("London","New York","Singapore","Mumbai"), cex = 0.8,
+fill = rainbow(length(x)))
+# Save the file.
+pie3D(x,labels = lbl,explode = 0.1, main = "Pie Chart of Countries ")
+pie3D(x,labels=lbl,explode = 0.1, main = "Pie Chart of Countries ",)
+legend("topright", c("London","New York","Singapore","Mumbai"), cex = 1.5,
+fill = rainbow(length(x)))
+lbl <-  c("London","New York","Singapore","Mumbai")
+# Give the chart file a name.
+#png(file = "3d_pie_chart.jpg")
+# Plot the chart.
+pie3D(x,labels = lbl,explode = 0.1, main = "Pie Chart of Countries ")
+pie3D(x,labels=lbl,explode = 0.1, main = "Pie Chart of Countries ",)
+legend("topright", c("London","New York","Singapore","Mumbai"), cex =0.8,
+fill = rainbow(length(x)))
+# Save the file.
+charv <- c("o","it","the","it","it")
+print(unique(charv))
+print(tabulate(match(charv, unique(charv))))
+# Calculate the mode using the user function.
+result <- getmode(charv)
+print(result)
+v <- c(2,1,2,3,1,2,3,4,1,5,5,3,2,3)
+# Calculate the mode using the user function.
+result <- getmode(v)
+print(result)
+# Create the function.
+getmode <- function(v) {
+uniqv <- unique(v)
+print(unique(v))
+print(tabulate(match(v, uniqv)))
+uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+v <- c(2,1,2,3,1,2,3,4,1,5,5,3,2,3)
+# Calculate the mode using the user function.
+result <- getmode(v)
+print(result)
+# Create the vector with characters.
+charv <- c("o","it","the","it","it")
+print(unique(charv))
+print(tabulate(match(charv, unique(charv))))
+# Calculate the mode using the user function.
+result <- getmode(charv)
+print(result)
+input <- mtcars[,c("mpg","disp","hp","wt")]
+print(head(input))
+input <- mtcars[,c("mpg","disp","hp","wt")]
+model <- lm(mpg~disp+hp+wt, data = input)
+print(model)
+# Get the Intercept and coefficients as vector elements.
+cat("# # # # The Coefficient Values # # # ","\n")
+a <- coef(model)[1]
+print(a)
+Xdisp <- coef(model)[2]
+Xhp <- coef(model)[3]
+Xwt <- coef(model)[4]
+print(Xdisp)
+print(Xhp)
+print(Xwt)
+Y = a+Xdisp.x1+Xhp.x2+Xwt.x3
+print(summary(model))
+paste("y=",a,"+",Xdisp,"*x1","+",Xhp,"*x2","+",Xwt,"*x3")
+input <- mtcars[,c("am","cyl","hp","wt")]
+am.data = glm(formula = am ~ cyl + hp + wt, data = input, family = binomial)
+print(summary(am.data))
+x = c(186, 176, 158, 180, 186, 168, 168, 164, 178, 170, 189, 195, 172,
+187, 180, 186, 185, 168, 179, 178, 183, 179, 170, 175, 186, 159,
+161, 178, 175, 185, 175, 162, 173, 172, 177, 175, 172, 177, 180)
+k=(x-mean(x))*(x-mean(x))/(2*sd(x)*sd(x))
+k1=exp(-k)
+k2=1/sqrt(2*3.14*sd(x)*sd(x))
+k3=k2*k1
+plot(x,k3)
+y<-dnorm(x,mean(x),sd(x))
+plot(x,y)
+print(mean(x))
+print(sd(x))
+setwd("E:/MCA/unit III")
+guna<-read.csv("guna1.csv")
+head(guna)
+summary(guna)
+setwd("E:/MCA/unit III")
+guna<-read.csv("guna1.csv")
+head(guna)
+summary(guna)
+x<-guna$Attitude
+print(x)
+print(mean(guna$Attitude))
+print(sd(guna$Attitude))
+y<-dnorm(guna$Attitude,mean=mean(guna$Attitude),sd=sd(guna$Attitude))
+plot(x,y)
+x<-guna$Apptitude
+print(x)
+print(mean(guna$Apptitude))
+print(sd(guna$Apptitude))
+y<-dnorm(guna$Apptitude,mean=mean(guna$Apptitude),sd=sd(guna$Apptitude))
+plot(x,y)
+x<-guna$Att.Value
+print(x)
+print(mean(guna$Att.Value))
+print(sd(guna$Att.Value))
+y<-dnorm(guna$Att.Value,mean=mean(guna$Att.Value),sd=sd(guna$Att.Value))
+plot(x,y)
+x <- seq(-10, 10, by = .1)
+# Choose the mean as 2.5 and standard deviation as 0.5.
+y <- dnorm(x, mean = 2.5, sd = 0.5)
+# Give the chart file a name.
+#png(file = "dnorm.png")
+plot(x,y)
+x <- seq(-10,10,by = .2)
+# Choose the mean as 2.5 and standard deviation as 2.
+y <- pnorm(x, mean = 2.5, sd = 2)
+# Give the chart file a name.
+#png(file = "pnorm.png")
+# Plot the graph.
+plot(x,y)
+x <- seq(0, 1, by = 0.02)
+# Choose the mean as 2 and standard deviation as 3.
+y <- qnorm(x, mean = 2, sd = 1)
+# Give the chart file a name.
+#png(file = "qnorm.png")
+# Plot the graph.
+plot(x,y)
+y <- rnorm(50)
+# Give the chart file a name.
+#png(file = "rnorm.png")
+# Plot the histogram for this sample.
+hist(y, main = "Normal DIstribution")
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.01)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+# Create a sample of 50 numbers which are incremented by 1.
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.25)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.4)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- pbinom(26,51,0.5)
+print(x)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- pbinom(x,50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- qbinom(x,50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- seq(0,-50,by = -1)
+# Create the binomial distribution.
+y <- qbinom(x,-50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
+x <- qbinom(0.25,51,1/2)
+print(x)
+x <- rbinom(8,150,.4)
+print(x)
+x <- seq(0,50,by = 1)
+# Create the binomial distribution.
+y <- dbinom(x,50,0.5)
+# Give the chart file a name.
+#png(file = "dbinom.png")
+# Plot the graph for this sample.
+plot(x,y)
