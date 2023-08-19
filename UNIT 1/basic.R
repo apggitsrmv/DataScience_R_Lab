@@ -1,0 +1,23 @@
+# vector
+a<-c(2,3,4)
+b<-c(3,-1,5)
+print(a+b)
+a*b
+a/b
+a-b
+#arrays
+a<-array(c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18),dim=c(3,3,2))
+print(a)
+b<-array(c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18),dim=c(3,3,2))
+print(b)
+d=a+b
+print(d)
+a1<-array(c(1,2,3,4,5,6,7,8,9,10),dim=c(5,2))
+print(a1)
+#matrices
+a1<-matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3,byrow=TRUE)
+print(a1)
+b1<-matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3)
+print(b1)
+c1=a1+b1
+print(c1)
