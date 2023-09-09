@@ -1,0 +1,41 @@
+# Read the data from guna.csv
+data <- read.csv("guna1.csv")
+
+# Create a bar chart for Attitude (replace "AttitudeColumn" with your column name)
+attitude_counts <- table(data$Attitude)
+bar_colors <- rainbow(length(attitude_counts)) # Generate colors for the bars
+
+# Create the bar chart
+barplot(
+  attitude_counts,
+  main = "Bar Chart for Attitude",
+  xlab = "Attitude",
+  ylab = "Count",
+  col = bar_colors, # Assign colors to the bars
+  #legend.text = names(attitude_counts), # Use the Attitude values for the legend
+  args.legend = list(x = "topright") # Adjust legend position
+)
+
+# Read the data from guna.csv
+data <- read.csv("guna1.csv")
+summary(data)
+# Combine data from multiple columns (replace "Column1" and "Column2" with your column names)
+combined_data <- paste(data$Attitude, data$Apptitude, sep = "_")
+
+# Calculate counts for the combined data
+combined_counts <- table(combined_data)
+
+# Generate colors for the bars
+bar_colors <- rainbow(length(combined_counts))
+
+# Create the bar chart
+barplot(
+  combined_counts,
+  main = "Bar Chart for Combined Data",
+  xlab = "Combined Categories",
+  ylab = "Count",
+  col = bar_colors,
+  legend.text = names(combined_counts),
+  args.legend = list(x = "topright")
+)
+

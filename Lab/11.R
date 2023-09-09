@@ -1,26 +1,30 @@
 #11.Create data files having name, age, DoJ, DoR, empcode,salary in
 #json,xml,xls Merge all those files as a singlefile into xls file
 
+install.packages("jsonlite")
 #A) How will you merge these two tables to create a single table
 # Load necessary libraries
-library(jsonlite)
+
 library(XML)
 library(readxl)
-
+library(jsonlite)
+getwd()
 # Read data from JSON files
-data_json1 <- fromJSON("employees1.json")
-data_json2 <- fromJSON("employees2.json")
+data <- read_json("employee1.json")
+print(data)
+data_jsonF <- read_json("employee1.json")
+data_jsonS <- fromJSON("employee2.json")
 
 # Read data from XML files
-data_xml1 <- xmlToDataFrame("employees1.xml")
-data_xml2 <- xmlToDataFrame("employees2.xml")
+data_xmlF <- xmlToDataFrame("employee1.xml")
+data_xmlS <- xmlToDataFrame("employee2.xml")
 
 # Read data from Excel files
-data_excel1 <- read.xlsx("employees1.xlsx", sheetName = "Sheet1")
-data_excel2 <- read.xlsx("employees2.xlsx", sheetName = "Sheet1")
+data_excelF <- read.xlsx("employees1.xlsx", sheetName = "Sheet1")
+data_excelS <- read.xlsx("employees2.xlsx", sheetName = "Sheet1")
 
 # Merge data from all sources into a single data frame
-merged_data <- rbind(data_json1, data_json2, data_xml1, data_xml2, data_excel1, data_excel2)
+merged_data <- rbind(data_jsonF, data_jsonS, data_xmlF, data_xmlS, data_excelF, data_excelS)
 
 # Save the merged data to a new Excel file
 write.xlsx(merged_data, "merged_employees.xlsx", sheetName = "Sheet1", row.names = FALSE)
