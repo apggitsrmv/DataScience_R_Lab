@@ -2,30 +2,75 @@
 #json,xml,xls Merge all those files as a singlefile into xls file
 
 install.packages("jsonlite")
+install.packages("xlsx")
+install.packages("XML")
 #A) How will you merge these two tables to create a single table
 # Load necessary libraries
 
 library(XML)
-library(readxl)
+library(xlsx)
 library(jsonlite)
 getwd()
 # Read data from JSON files
-data <- read_json("employee1.json")
-print(data)
+#data <- read_json("employee1.json")
+#print(data)
 data_jsonF <- read_json("employee1.json")
 data_jsonS <- fromJSON("employee2.json")
 
-# Read data from XML files
-data_xmlF <- xmlToDataFrame("employee1.xml")
-data_xmlS <- xmlToDataFrame("employee2.xml")
+# Load the XML package
+#library(XML)
 
+# Specify the path to the XML file
+#xml_file <- "employee2.xml"
+
+# Parse the XML file
+#doc <- xmlParse(xml_file)
+
+# Extract the data into a data frame
+#data <- xmlToDataFrame(doc)
+
+# Print the data frame
+
+xml_fileF<- "employee1.xml"
+xml_fileS<- "employee2.xml"
+docF <- xmlParse(xml_fileF)
+docS <- xmlParse(xml_fileS)
+
+# Read data from XML files
+data_xmlF <- xmlToDataFrame(docF)
+data_xmlS <- xmlToDataFrame(docS)
+print(data_xmlF)
+print(data_xmlS)
 # Read data from Excel files
+
+library(xlsx)
 data_excelF <- read.xlsx("employees1.xlsx", sheetName = "Sheet1")
 data_excelS <- read.xlsx("employees2.xlsx", sheetName = "Sheet1")
+#print(data_excelF)
+
+# Check and rename columns if needed in df1
+if (!all(names() == c("Name", "Age", "Salary", "Department"))) {
+  colnames(df1) <- c("Name", "Age", "Salary", "Department")
+}
+
+# Check and rename columns if needed in df2
+if (!all(names(df2) == c("Name", "Age", "Salary", "Department"))) {
+  colnames(df2) <- c("Name", "Age", "Salary", "Department")
+}
+
+# Check and rename columns if needed in df3
+if (!all(names(df3) == c("Name", "Age", "Salary", "Department"))) {
+  colnames(df3) <- c("Name", "Age", "Salary", "Department")
+}
+
+# Concatenate data frames using rbind
+merged_data <- rbind(df1, df2, df3)
+
+
 
 # Merge data from all sources into a single data frame
 merged_data <- rbind(data_jsonF, data_jsonS, data_xmlF, data_xmlS, data_excelF, data_excelS)
-
+print(merged_data)
 # Save the merged data to a new Excel file
 write.xlsx(merged_data, "merged_employees.xlsx", sheetName = "Sheet1", row.names = FALSE)
 

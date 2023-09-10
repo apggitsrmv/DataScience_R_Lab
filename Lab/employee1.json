@@ -2,32 +2,31 @@
     {
       "EmployeeName": "Swetha",
       "Age": 26,
-      "Salary": 49000,
+      "Salary": 4900,
       "Department": "Finance"
     },
     {
       "EmployeeName": "Mahesh",
       "Age": 28,
-      "Salary": 50000,
+      "Salary": 5000,
       "Department": "HR"
     },
     {
       "EmployeeName": "Hari",
       "Age": 25,
-      "Salary": 48000,
+      "Salary": 4800,
       "Department": "IT"
     },
     {
       "EmployeeName": "Ammu",
       "Age": 29,
-      "Salary": 52000,
+      "Salary": 5200,
       "Department": "Sales"
     },
     {
       "EmployeeName": "Mani",
       "Age": 31,
-      "Salary": 55000,
+      "Salary": 5500,
       "Department": "Marketing"
     }
   ]
-  
