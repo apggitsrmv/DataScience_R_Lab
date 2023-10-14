@@ -18,6 +18,7 @@ b<-array(c(1,2,3,4,5,6,7,8,9,10,11,12),dim=c(3,3))
 print(b)
 d=a+b
 print(d)
+
 #Accessing Array Elements
 # Create two vectors of different lengths.
 vector1 <- c(5,9,3,11,12,13,14,15,16)
