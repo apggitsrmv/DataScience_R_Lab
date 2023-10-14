@@ -12,8 +12,8 @@ library(xlsx)
 library(jsonlite)
 getwd()
 # Read data from JSON files
-#data <- read_json("employee1.json")
-#print(data)
+data <- read_json("employee1.json")
+print(data)
 df1 <- fromJSON("employee1.json")
 df2 <- fromJSON("employee2.json")
 

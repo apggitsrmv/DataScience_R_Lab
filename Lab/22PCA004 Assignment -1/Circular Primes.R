@@ -1,51 +1,45 @@
-## Sieve of Eratosthenes for generating primes 2:n
-esieve <- function(n) {
-  if (n == 1) return(NULL)
-  if (n == 2) return(n)
-  # Create a list l of consecutive integers {2,3,.,N}.
-  l <- 2:n
-  # Start counter
-  i <- 1
-  # Select p as the first prime number in the list, p=2.
-  p <- 2
-  while (p^2 <= n) {
-    # Remove all multiples of p from the l.
-    l <- l[l == p | l %% p != 0]
-    # set p equal to the next integer in l which has not been removed.
-    i <- i + 1
-    # Repeat steps 3 and 4 until p2 > n, all the remaining numbers in the list are primes
-    p <- l[i]
+# Function to check if a number is prime
+is_prime <- function(n) {
+  if (is.na(n) || n < 2) return(FALSE)
+  for (i in 2:sqrt(n)) {
+    if (n %% i == 0) return(FALSE)
   }
-  return(l)
-}
-rotate <- function (v) {
-  l <- length(v)
-  if (l != 1) {
-    w <- (1:l) + 1
-    w[w > l] <- 1
-  }
-  v <- v[w]
-  return (v)
+  TRUE
 }
 
-primes <- esieve(1e6)
-print(primes)
-answer <- 0
-
-t <- proc.time()
-for (n in primes) {
-  digs <- as.numeric(unlist(strsplit(as.character(n), "")))
-  circular.prime <- TRUE
-  if (n > 9) {
-    if (!any(digs %% 2 == 0)) {
-      for (i in 1:(length(digs) - 1)) {
-        digs <- rotate(digs)
-        if (!is.prime(as.numeric(paste0(digs, collapse=""))))
-          circular.prime <- FALSE
+# Function to generate circular primes up to a given limit
+generate_circular_primes <- function(limit) {
+  circular_primes <- c()
+  
+  # Function to rotate digits of a number
+  rotate <- function(x) {
+    digits <- as.character(x)
+    rotations <- sapply(1:(nchar(x)-1), function(i) paste0(c(tail(digits, -i), head(digits, i)), collapse = ""))
+    as.numeric(c(x, rotations))
+  }
+  
+  # Loop through numbers up to the limit
+  for (num in 2:limit) {
+    # Check if the number is prime
+    if (is_prime(num)) {
+      # Check if all circular permutations are prime
+      circular <- all(sapply(rotate(num), is_prime))
+      if (circular) {
+        circular_primes <- c(circular_primes, num)
       }
-    } else circular.prime <- FALSE
+    }
   }
-  if (circular.prime) answer <- answer + 1
+  
+  circular_primes
 }
-print(proc.time() - t)
-print(answer)
+
+# Set the limit for circular primes
+limit <- 100000
+
+# Generate circular primes
+circular_primes <- generate_circular_primes(limit)
+
+# Print the count and circular primes
+cat("Number of Circular Primes up to", limit, ":", length(circular_primes), "\n")
+#cat("Circular Primes:", circular_primes, "\n")
+
