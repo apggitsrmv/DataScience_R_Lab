@@ -1,0 +1,35 @@
+Linear Regression:
+y=ax+b
+
+x:    2017 2018 2019 2020     2021
+y: 20000  20000  25000  24000  ?
+x: 1,2,3,4,5
+y:2,4,6,8,10
+xy=2,8,18,32
+x2=1,4,9,16
+n=4
+89000/4=22500
+We will be able to convert as an equation?
+ 
+mean, median mode -> central tendency
+
+y-ybar= m(x-xbar)
+
+ybar=sigma(y)/number of y values
+     (2+4+6+8)/4 20/4= 5
+xbar=sigma(x)/number of x values
+    =(1+2+3+4)/4
+     =2.5
+
+y-5=m(x-2.5)
+m->?
+Equation of line y on x
+byx=n*sigma(xy)-sigma(x)sigma(y)/n*sigma(x^2)-sigma(x)^2
+   =4*60-10*20/(4*30-100)
+   =240-200/(120-100)
+   40/20=2
+
+y-5=2(x-2.5)
+y-5=2x-5
+y=2x
+
