@@ -1,0 +1,33 @@
+[
+    {
+      "EmployeeName": "Mahesh",
+      "Age": 28,
+      "Salary": 50000,
+      "Department": "HR"
+    },
+    {
+      "EmployeeName": "Dhinesh",
+      "Age": 30,
+      "Salary": 55000,
+      "Department": "Finance"
+    },
+    {
+      "EmployeeName": "Hari",
+      "Age": 25,
+      "Salary": 48000,
+      "Department": "IT"
+    },
+    {
+      "EmployeeName": "Aravind",
+      "Age": 32,
+      "Salary": 60000,
+      "Department": "Marketing"
+    },
+    {
+      "EmployeeName": "Anand",
+      "Age": 27,
+      "Salary": 52000,
+      "Department": "Sales"
+    }
+  ]
+  
