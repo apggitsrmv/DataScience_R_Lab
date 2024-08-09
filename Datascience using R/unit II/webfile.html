@@ -1,0 +1,855 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>The Omega Project for Statistical Computing</title>
+<link rel=stylesheet href="My.css" >
+<LINK rel="alternate" TYPE="application/rss+xml"
+     TITLE="RSS" HREF="/omega.rss">
+</head>
+
+<body>
+<h1><a name=toc1>The Omega Project for Statistical Computing</a></h1>
+<!--
+<p align=right><a href="omega.rss"><img src="rssfeed.gif"/><font size=-1>RSS of recent topics</font></a>
+-->
+
+<p align=right><a href="http://omegahat.wordpress.com/">Blog</a></p>
+
+<p align=right><a href="contents.html"><font size=-1>Table of Contents</font></a>
+<!--<p align=right><a href="Wiki"><img src="Images/new.jpg"><font size=-1>Wiki for discussing
+      Omegahat packages and ideas.</font></a>-->
+<!--
+<p align=right><a href="RecentActivities.html"><font size=-1>Recent Activities</font></a>
+-->
+<p align=right><a href="cranRepository.html">CRAN-style repository for Omegahat packages</a>
+
+<p align=right><a href="Papers/index.html">Papers on General Topics</a>
+
+<!--<p align=right><font size=-1">rsync access to CVS and Web trees: <code>rsync www.omegahat.net::</code></font>-->
+
+
+<h2>Recently Updated packages</h2>
+<div style="padding-left: 50pt; padding-right: 50pt;">
+<div style="background-color: lightgray;">
+<p>
+ These can (typically) be download from the package-specific site
+which is  <i>http://www.omegahat.net/&lt;package name&gt;</i>,
+e.g.
+  <b>http://www.omegahat.net/RGraphicsDevice</b>
+
+<p>
+Alternatively, you can download any package (and its previous versions) from the R repository on this site
+<center>
+  <code>http://www.omegahat.net/R</code>
+</center>
+and specifically
+<center>
+   <code><a href="http://www.omegahat.net/R/src/contrib">http://www.omegahat.net/R/src/contrib</a></code>
+</center>
+One can use this repository from within R via
+<pre class="scode">
+  install.packages(packageName, repos = "http://www.omegahat.net/R")
+</pre>
+
+For some packages, there are binaries for Windows.
+For most others, you will need to specify to download the source package:
+<pre class="scode">
+  install.packages(packageName, repos = "http://www.omegahat.net/R"<b>, type = "source"</b>)
+</pre>
+</p>
+</div>
+</div>
+
+ <center>
+ <table border="1">
+   <title>Omegahat Packages for R</title>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RFirefox">RFirefox</a></th><th>
+    This embeds R within the Firefox Web browser and allows 
+    JavaScript code to call R functions and evaluate R expressions.
+    It also allows R functions and code to access JavaScript objects
+    and methods and so be used as event handlers and to generate dynamic content within
+    a Web page.  (Gabe Becker and Duncan Temple Lang)
+  </th>
+   </tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RKML">RKML</a></th><th>(Version 0.1-0) updates to RKML
+ and <a href="RKML/JSM2011/README.html">annotated examples</a> presented at the JSM 2011 in the
+   session <a href="http://www.amstat.org/meetings/jsm/2011/onlineprogram/ActivityDetails.cfm?SessionID=206267">Statistical Graphics in Climate Research</a>.
+  </th>
+   </tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RGoogleStorage">RGoogleStorage</a></th><th>(Version 0.1-0) a package to interface
+Google's storage API from within R, to upload and download data.
+  </th>
+   </tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="REuPathDB">REuPathDB</a></th><th>(Version 1.0-0) a package to interface
+the EuPathDB (Eukaryotic Pathogen Database Resources) Web Services
+via their REST API.  This is  machine generated code derived from
+the WADL files describing the Web service methods.  
+  </th>
+   </tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="WADL">WADL</a></th><th>(Version 0.2-0)  a package that can
+programmatically generate R code to interface REST Web Services
+that are described by a WADL (Web Application Description Language)
+document, e.g. the EuPathDB.
+  </th>
+   </tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="RExcelXML">RExcelXML</a>
+	</th><th>Enhancements for reading XLSX files. See also the xlsx package by Adrian Dragulescu.</th></tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RGoogleDocs">RGoogleDocs</a></th><th>update for RGoogleDocs
+to enhance uploadDoc() and deleteDoc() and subsetting worksheet references, among other things.
+  </th>
+   </tr>
+
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="REuPathDB">REuPathDB</a></th><th>a package to interface
+the EuPathDB (Eukaryotic Pathogen Database Resources) Web Services
+via their REST API.  This is  machine generated code derived from
+the WADL files describing the Web service methods.  
+  </th>
+   </tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="WADL">WADL</a></th><th>a package that can
+programmatically generate R code to interface REST Web Services
+that are described by a WADL (Web Application Description Language)
+document, e.g. the EuPathDB.
+  </th>
+   </tr>
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="SpiderMonkey">SpiderMonkey</a></th><th>a package that maps allows R programmers to call
+JavaScript functions and methods from R and to evaluate JavaScript scripts.
+This is useful for running JavaScript code that might be of use in R,
+but also for manipulating Web documents displayed in a Web browser
+when R is embedded in the browser as an extension. This is possible
+with an updated version of the RFirefox package to be released very soon.
+  </th></tr>      
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="ROpenOffice">ROpenOffice</a></th><th>update for
+reading OpenOffice spreadsheets directly in R via the XML
+content in the .ods files.
+  </th></tr>      
+
+
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="GeoIP">GeoIP</a></th><th>a package that maps IP addressess and 
+ host names to geographic locations - latitude, longitude, region, city, zip code, ....
+ This package is built via RGCCTUFFI to provide dynamic access to existing native code.
+ In addition to the basic functions provided by the C library, the package provides a function
+ for finding the nearest CRAN mirror.</th></tr>      
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RGCCTUFFI">RGCCTUFFI</a></th><th>a package that programmatically
+generates Rffi-based dynamic interfaces to native C routines and data structures
+without very much human intervention. (You have to call the main function in the package!)</th></tr>      
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RAutoGenRunTime">RAutoGenRunTime</a></th><th>run-time support for
+programmatically generated code via RGCCTranslationUnit and RGCCTUFFI.</th></tr>      
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="Rffi">Rffi</a></th><th>an interface to libffi for invoking
+  arbitrary compiled routines from R without the need for writing and compiling
+   wrapper code. Instead, one can describe the routine's input and output types in R
+   and Rffi does the marshalling to invoke the routine and return the value.</th></tr>      
+
+
+    <tr align='left'><th><img src="Images/new.jpg"><a
+    href="RGCCTranslationUnit">RGCCTranslationUnit</a></th><th>functionality to read C/C++ code and to generate
+bindings to those routines, classes and data structures.</th></tr>      
+
+
+    <tr align='left'><th><a
+    href="XMLRPC">XMLRPC</a></th><th>Bug fix release thanks to Paul Shannon.</th></tr>         
+
+    <tr align='left'><th><a
+    href="RCurl">RCurl</a></th><th>Bug fix for ftpUpload(), found by Spencer Graves.</th></tr>         
+
+    <tr align='left'><th><a
+    href="RKML/GoogleEarth">Google Earth plugin and R</a></th><th>Examples for embedding
+    Google Earth in a Web page and using an R plot (in SVG) to
+    interact with the Google Earth plugin. </th></tr>      
+   
+    <tr align='left'><th><a
+    href="RWordpress">RWordpress</a></th><th>Facilities for
+    interacting with a blog site.</th></tr>      
+   
+    <tr align='left'><th><a href="XMLRPC">XMLRPC</a></th><th>Update to
+    the XMLRPC package for remote procedure calls via HTTP and XML.</th></tr>      
+
+   
+    <tr align='left'><th><a href="RKMLDevice">RKMLDevice</a></th><th>R
+    graphics device (pure R code) for drawing R plots in KML for
+    display on Google Earth.</th></tr>   
+
+    <tr align='left'><th><a href="RKML">RKML</a></th><th>Updated</th></tr>
+    
+    <tr align='left'><th><a href="RHTMLForms">RHTMLForms</a></th><th>Updated</th></tr>
+    <tr align="left"><th><a
+    href="RFreetype">RFreetype</a></th><th>A package to read font
+    files,
+	e.g. True Type Font files (.ttf files),
+     and to retrieve font metric information. This can be used
+     by graphics devices (written in R with <a href="RGraphicsDevice">RGraphicsDevice</a>)
+     to do computations on strings to determine their sizes.</th>   
+   
+    <tr align="left"><th><a
+    href="RGoogleTrends">RGoogleTrends</a></th><th>Interface to query
+    and download Google trends data.</th>   
+   
+    <tr align="left"><th><a href="RTidyHTML">RTidyHTML</a></th><th>Interface to libtidy for
+    cleaning up HTML documents to be well-formed</th>   
+    <tr align="left"><th><a href="RNYTimes">RNYTimes</a></th><th>Interface to several New York Times Web services</th>
+   
+    <tr align=left><th>
+	REST-related packages
+	</th>
+   <th>
+       The following are examples of implementing interfaces
+       to REST APIs as an R client:
+       <ul>
+	 <li> <a href="RGoogleDocs">RGoogleDocs</a>
+	 <li> <a href="Zillow">Zillow</a>
+	 <li> <a href="RAmazonS3">RAmazonS3</a>
+	 <li> <a href="RAmazonDBREST">RAmazonDBREST</a>	     
+	 <li> <a href="Rflickr">Rflickr</a>
+	 <li> <a href="RNYTimes">RNYTimes</a>	     
+
+	 <li> <a
+       href="http://cran.r-project.org/web/packages/twitteR/index.html">twitteR
+       by Jeff Gentry</a>
+	 <li> <a
+       href="http://cran.r-project.org/web/packages/RLastFM/index.html">
+	     RLastFM by Greg Hirson</a>
+       </ul>
+
+       Related infrastructure packages include
+       <ul>
+	 <li> <a href="RCurl">RCurl</a>
+	 <li> <a href="XML">XML</a>
+	 <li> <a href="RJSONIO">RJSONIO</a>
+	 <li> <a href="http://cran.r-project.org/web/packages/rjson/index.html">rjson</a>	     
+       </ul>
+       
+       </th>
+  </tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="RAmazonDBREST">RAmazonDBREST</a>
+	</th><th>A REST-based interface to Amazon's SimpleDB service
+	for hosting databases and facilitating creating databases,
+	adding and deleting content, and making queries.</th></tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="RDocbook">RDocbook</a>
+	</th><th>Code for working with R and Docbook documents.
+	 These are external facilities (from R) such as
+	  Emacs bindings and shell scripts that facilitate authoring
+	and processing Docbook documents with R code.</th></tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="XMLRPC">XMLRPC</a>
+	</th><th>A package that provides basic XML-RPC client
+	facilities for accessing remote methods in XML-RPC
+	servers.</th></tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="RExcelXML">RExcelXML</a>
+	</th><th>Facilities for working with .xlsx documents,
+	i.e. Excel 2007.</th></tr>
+
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="RUbigraph">RUbigraph</a>
+	</th><th>A package that provides an interface to Ubigraph,
+	    an Open GL application for rendering interactive graphs
+	(node &amp; edges). The connection is via XML-RPC.</th></tr>	
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="RKML">RKML</a>
+	</th><th>A package that provides high-level functions
+	for creating KML displays for Google Earth from within R,
+	    using spatial temporal data.</th></tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="R2GoogleMaps">R2GoogleMaps</a>
+	</th><th>A package that allows R programmers to create HTML
+	and JavaScript code to display content via Google Maps in a
+	Web Browser</th></tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="RJavaScript">RJavaScript</a>
+	</th><th>A package that converts R code to JavaScript to help
+	creating JavaScript content for Web pages, Flash applications,
+	SVG displays, ...</th></tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="RAmazonS3">RAmazonS3</a>
+	</th><th>Package that allows R programmers to interact with
+	Amazon's S3 storage server, uploading and downloading and
+	generally managing files.</th></tr>
+   
+    <tr align=left><th><img src="Images/new.jpg"><a href="RRuby">RRuby</a>
+	</th><th>Package that allows R programmers to call Ruby from R</th></tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="Rcrypt">Rcrypt</a>
+	</th><th>Interface to the crypt C routine for encrypting passwords.</th></tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="RGraphicsDevice">RGraphicsDevice</a>
+	</th><th>Package that allows R programmers to implement R graphics devices entirely within R code</th></tr>
+    <tr align=left><th><img src="Images/new.jpg"><a href="FlashMXML">FlashMXML</a>
+	</th><th>a prototype of an R graphics device that generates Flash/Flex content.</th></tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="XMLSchema">XMLSchema</a>
+	</th><th>A package for reading and processing XML schema in R</th></tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="SSOAP">SSOAP</a>
+	</th><th>A package for R client-side access to SOAP-based Web services </th></tr>
+
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/RSXML">XML</a>
+  </th>
+  <th>Numerous updates for parsing and generating XML content. </th>
+</tr>  
+
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/RCurl">RCurl</a>
+  </th>
+  <th>Updates for new versions of libcurl and the many new options.</th>
+</tr>  
+
+    <tr align=left><th><a href="Rcompression/index.html">Rcompression package</a>
+	</th><th> Interface to zlib and bzip2 libraries for performing in-memory compression and decompression
+ in R.  This is useful when receiving or sending contents to remote servers, e.g. Web services, HTTP requests via RCurl.
+</th></tr>
+
+    <tr align=left><th><a href="Sxslt/index.html">Sxslt package</a>
+	</th><th>Updates to the bi-directional interface between R and
+	libxslt.
+        In particular, the use of XSLT from within R is greatly
+	enhanced with much greater control of registering functions, 
+        parameters, etc.
+</th></tr>
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/RSJava">SJava</a>
+  </th>
+  <th>
+     Bug fixes and new features for converters.
+     And removed the dependency on an old version of ANTLR.
+  </th>
+</tr>  
+
+
+
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/Rexif">Rexif</a>
+  </th>
+  <th>
+     An R package for reading camera information
+     and other  meta-data from images taken with digital cameras.
+  </th>
+</tr>  
+
+
+
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/CGIwithR">CGIwithR</a>
+  </th>
+  <th>
+     Extensions to David Firth's original CGIwithR package.
+     I am now maintaining that package after David's 
+     good work.
+  </th>
+</tr>  
+
+
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/Aspell">Aspell</a>
+  </th>
+  <th>
+      An interface to the GNU aspell library for checking
+      the spelling of words and entire documents.
+  </th>
+</tr>  
+
+   
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/RDCOMEvents">RDCOMEvents</a>
+  </th>
+  <th>
+     This package provides a facility to listen for DCOM events
+ from applications such as Excel and Word and others and to 
+ process them with R functions.
+  </th>
+</tr>  
+
+
+  <tr align=left><th><img src="Images/new.jpg">
+      <a href="http://www.omegahat.net/Combinations">Combinations</a>
+  </th>
+  <th>
+  This package is used for generating the combinations for choosing r
+  items from a set of n items  but does it in C code.
+  When n gets large, the package provides a mechanism for dealing with each combination
+  as it is generated so that one does not have to hold the entire collection around
+  and operate on them after creating the entire collection.
+  This makes computations feasible for very large numbers of combinations. It does not 
+  necessarily make them fast!
+  The package is also a good example of the basics of calling R functions from C code.
+  It also illustrates aspects of adapting code for a stand-alone application to be used within
+  an interactive language like R/S-Plus, Python, Perl or Matlab/Octave.
+  </th>
+</tr>  
+
+
+
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/RMatlab">RMatlab</a>
+  </th>
+  <th>
+    An interface between R and Matlab.
+    One can call R functions from Matlab code,
+    and Matlab functions from R code
+    using the syntax of the local programming language.
+  </th>
+</tr>  
+   
+<tr>
+  <tr align=left><th><img src="Images/new.jpg">
+      <a href="http://www.omegahat.net/RCurl">RCurl</a>
+  </th>
+  <th>
+    A package for performing HTTP  requests
+    using the C-level cURL library.
+    This is a very flexible, customizable way to
+    handle HTTP-based communications from within R
+    in a higher-level and more  extensive way than
+    is directly available via socket connections.
+    This is used by the <a href="http://www.omegahat.net/SSOAP">SSOAP
+  package</a>
+      and a forthcoming package for HTML form submissions.
+  </th>
+</tr>  
+
+   
+<tr>
+  <tr align=left><th>
+      <a href="http://www.omegahat.net/Rstem">Rstem</a>
+  </th>
+  <th>
+      A package for performing word stemming
+      for use in text analysis.
+      This is an interface to Martin Porter's
+      <a href="http://snowball.tartarus.org">Snowball</a>
+      generated C code for performing
+      stemming. The package has
+      support for several languages
+      and is exensible.
+  </th>
+</tr>  
+   
+  <tr>
+   <tr align=left><th>
+      <a href="http://www.omegahat.net/IDocs">IDocs</a> 
+    </th>    
+  <th>
+   An experimental package for interactive documents
+      created in XML and rendered using
+      viewHtml in <a href="RGtkViewers">RGtkViewers</a>.
+      This connects the different plugins in a document
+      and across documents using nested environments and
+      a stack that pushes and pops environments as they
+      are entered and exited.
+  </th></tr>
+
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/OmegahatXSL">XSL files
+	for Omegahat</a> 
+    </th>    
+  <th>
+   This is a collection of support XSL, DTD and CSS files
+    for Omegahat. The suite allows thefiles to be used via <i>catalogs</i>.
+  </th></tr>
+  
+
+   
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/SASXML">SASXML</a> 
+    </th>    
+  <th>
+   An experimental package for reading XML data in
+   the Open Information Model (OIM) format,
+   e.g. SAS XML files.
+   This might be generalized to have functionality
+   for reading  PMML (Predictive Model Markup Language).
+  </th></tr>
+
+   
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/RDCOMServer">RDCOMServer</a> 
+    </th>    
+  <th>
+    A rich, extensible and flexible mechanism for defining
+      and implementing COM classes and objects
+      entirely within the S language.
+      This allows one to make S functions and objects
+      accessible to other applications and programming languages
+      without people having to know the S language.
+      This provids not just access to the R evaluator, but
+      arbitrary S objects.
+  </th></tr>
+
+
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/RDCOMClient">RDCOMClient</a> 
+    </th>    
+  <th>
+    A mechanism that allows S users to create and use COM objects
+    directly within an R session.
+  </th></tr>
+  
+
+   
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/RGnomePrint">RGnomePrint</a> 
+    </th>    
+  <th>
+   An R interface to libgnomeprint, the Gnome printing library that
+      provides facilities for controlling printing from Gtk widgets,
+      previewing, and generating Postscript, Windows metafiles (and
+      potentially PDF.)
+  </th></tr>
+
+   
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/GccTranslationUnit">GccTranslationUnit</a> 
+    </th>    
+  <th>
+     A Python module for obtaining reflectance information from C/C++
+     source code. This can be used to programmatically generate S bindings
+      to arbitrary routines, classes and data structures
+      in native code and also build the registration
+      table for routines to be accessed from R.
+      We can also use this to compute on C/C++ code,
+      e.g. determining  call graphs, free variables.      
+  </th></tr>
+
+   
+  <tr>
+    <tr align=left><th>
+      <a href="http://www.omegahat.net/SWinTypeLibs">SWinTypeLibs</a> 
+    </th>    
+  <th>
+      Facilities for reading type information from DLLs, type
+      libraries or (D)COM objects directly in R.
+      This can be used to programmatically generate interfaces
+      to C/C++ code.
+  </th></tr>
+
+  <tr>
+    <tr align=left><th>
+    <a href="http://www.omegahat.net/SWinRegistry">SWinRegistry</a> 
+    </th>
+  <th>
+      Read and write access to the Windows registry.
+      For Windows platform only.
+  </th></tr>  
+  
+  
+ 
+
+   
+  <tr>
+    <tr align=left><th><a
+	href="RGtkExtra/index.html">S language binding
+	to the gtk+extra library.
+	</a>
+	</th><th>
+	    Access to the widgets in the gtk+extra library,
+	    i.e. the data-grid/sheet display,
+	    directory list, icon list and file list.
+	</th></tr>
+
+  <tr>
+    <tr align=left><th><a
+	href="RGdkPixbuf/index.html">S language binding
+	to the Gdk pixbuf library.
+	</a>
+	</th><th>
+	   Access to the Pixbuf library for reading
+	    images into R to be used in RGtk
+	    and associated packages.
+	</th></tr>	
+
+  <tr>
+    <tr align=left><th><a
+	href="RGtkGlade/index.html">S language binding
+	to the Glade library.
+	</a>
+	</th><th>
+	  S language facilities for instantiating
+	    GUIs constructed interactively via the
+	    glade GUI builder.
+	    This can register S functions or expressions, or C routines specified
+	    as callbacks in the glade interface.
+	</th></tr>
+
+
+  <tr>
+    <tr align=left><th><a
+	href="REventLoop/index.html">
+	A plugin event-loop for R.
+	</a>
+	</th><th>
+         A facility that allows one to dynamically
+	    specify a new event loop to use within
+	    an R session. This allows one to use
+	    Gtk or Tk event loop
+	    to drive R. One can write methods
+	    for other toolkits such as Carbon, Qt, etc.
+	</th></tr>		
+   
+	
+  <tr>
+    <tr align=left><th><a
+	href="RGtkBindingGenerator/index.html">S language binding
+	generator for Gtk-based libraries.
+	</a>
+	</th><th>A package that creates S and C code to
+	interface to arbitrary Gtk-based C libraries and Gtk classes
+	    such as Gtk itself, Zvt, gtk+-extra, gtkhtml, embedded
+	    Mozilla, etc.
+	</th></tr>
+
+    <tr align=left><th><img src="Images/new.jpg"><a href="RSXML/index.html">R/SPlus XML Parsing
+	package</a>
+	</th><th>Parse and create XML documents within the S
+	    language.</th></tr>
+
+    <tr align=left><th><a href="RGtk/index.html">RGtk package </a>
+	</th><th>Bindings for programming GUIs using Gtk and extended
+	    widget sets.</th></tr>	    
+    
+    <tr align=left><th><a href="RXLisp/index.html">An R-XLisp
+	interface </a>
+	</th><th>Interface between R and XLisp allowing R code to call
+	    XLisp functions.</th></tr>    
+    <tr align=left><th><a href="RObjectTables/index.html">RObjectTables
+	package </a>
+	</th><th>Framework for user-defined search path elements,
+	     alternative automatic serialization, 
+	     external variables, etc.</th></tr>
+    <tr align=left><th><a href="RGtkViewers/index.html">RGtkViewers package</a>
+	</th><th>A collection of GUI tools for viewing different
+	     information, built using RGtk.</th></tr>   		    
+   <tr align=left><th><a
+       href="RSMethods/index.html">RSMethods</a></th>
+        <th>Formal S classes and methods for R.</th>
+    <tr></tr>
+    <tr align=left><th><img src="Images/new.jpg"><a href="RSPython/index.html">RSPython</a></th>
+    <th>a bi-directional interface allowing calling
+    R functions from Python code and accessing Python
+    objects, classes and functions from R sessions.</th></tr>
+
+    <tr align=left><th><a href="RSPerl/index.html">RSPerl</a></th>
+    <th>a bi-directional interface allowing calling
+    R functions from Perl code and accessing Perl
+    objects, classes and routies from R sessions.</th></tr>    
+    
+    <tr align=left><th><a
+	href="RGnumeric/index.html">RGnumeric</a></th>
+	<th>an R plugin for Gnumeric that allows Gnumeric
+	users to call R functions from within a spreadsheet,
+	and for R programmers to access Gnumeric sheets
+	and their contents from within R functions.</th>
+    </tr>
+    
+    
+   <tr align=left><th><a href="SXalan">R embedded in Xalan, the XSL
+       translator</a></th><th>Use R to generate output in and control
+	   transformation of XML documents using XSL functions</th></tr>
+   <tr align=left><th><a href="SNetscape">R Plugin for
+       Netscape</th><th>
+	    A plugin for Netscape that allows one to call R from
+	   JavaScript and JavaScript from R.
+	   </th></tr>
+ </table>   
+</center>
+
+These are just some of a <a href="download/R/packages">complete collection of Omegahat packages for R and S-Plus</a>.
+ 
+<center><h3>
+</h3></center>
+
+
+<hr width=50%>
+
+Omega is a joint project with the goal of providing a variety of
+<a href="License.html">open-source</a> software for statistical
+applications.
+The Omega project began in July, 1998, with discussions among
+designers responsible for three current statistical languages (S, R,
+and Lisp-Stat), with the idea of working together on new directions
+with special emphasis on web-based software, Java, the Java
+virtual machine, and distributed computing.
+We encourage participation by anyone wanting to extend
+computing capabilities in one of the existing languages, to those
+interested in distributed or web-based statistical software, and to
+those interested in the design of new statistical languages.
+<p>
+Software is being developed for the project; we refer to it as the <FONT
+CLASS=Omegahat>omegahat</FONT> software, to emphasize in typical
+statistical terminology that we are starting on a process of
+approximating the ideal software through many iterations, among other
+<a href="Name.html">reasons</a>.
+<p>
+
+Follow the pointers below to find out more about the omegahat software.
+<ul>
+  <li> <a href="#Levels">Organization of the Software.</a>
+  <li> <a href="#Documentation">Documentation. </a>
+  <li>
+     <a href="http://www.omegahat.net/mailman/listinfo">Mailing Lists.</a>.
+<li> <a href="download/index.html">Source &amp; Binary
+    Distributions.</a>
+<li><a href="#Related">Related Software.</a>
+<p>
+</ul>
+<p>
+
+<h2><a href="philosophy.html">Philosophy</a></h2>
+
+<h2><a name="Related">Related Software</a></h2><p>
+Some of the many areas in which Java packages may be of value to statistics
+include:
+<ul>
+<li>the JDBC database connectivity software, providing a general interface to database
+systems, extended by some facilities typically needed in
+statistical applications;
+<li>  numerical computations for linear algebra (e.g.,
+work is currently proceeding on two Java matrix
+and linear algebra packages called
+<a href="http://math.nist.gov/javanumerics/jama/">JAMA</a>
+    and
+<a href="http://nicewww.cern.ch/~hoschek/colt/index.htm">COLT</a>
+);
+<li>processing and analysis of images---can we combine
+computational techniques with the flexibility of graphics
+and user interface tools in Java;
+<li>graphics---possible new models for statistical graphics;
+<li>dynamic reporting -- the Java packages supporting 
+<a href="http://www.w3.org/XML">XML</a>, lightweight components
+(<a href="http://www.javasoft.com/products/jfc/tsc/index.html">Swing/Java Foundation Classes</a>), HTML viewers
+and network-distributed computations make the Omega
+environment useful for generating reports with live objects.
+</ul>
+In many of these areas, there have been questions about the speed
+attainable by Java.  Investigating such questions is part of what we
+want to do.
+
+<h2><a name=toc3>Policy</a></h2>
+<p>
+Specific goals and procedures are still being developed, but the current
+policy includes the following.
+<ul>
+<li>The code developed will be created and offered as open-source
+software, under a <a href="License.html">public license</a> similar to the licenses used for
+Linux, Netscape, and R.
+<li>Contributions are encouraged in the form of software compatible
+with the three-level structure shown above.  This includes but is not restricted
+to: Java packages; software in other languages, if it can be structured as a module
+defined in CORBA;  software for the interactive languages built in
+Omega.
+<li>We anticipate organizing software into layers, including at
+least two:  a general contributed software layer and a central layer for
+core Omega facilities.
+<li>We have established a number of
+<a href="http://www.omegahat.net/mailman/listinfo/">mailing
+lists</a> for exchange of ideas.  These include lists for general
+discussion, for Omega packages, for interactive languages using
+Omega, and for technical issues about Omega itself.
+</ul>
+<p>
+<h2><a name=toc4>Membership</a></h2>
+<p>
+The current core group of Omega developers includes:
+<center>
+<table border="1">
+<tr>
+<th align=left><font size=-1><a href="http://www.stat.wisc.edu/~bates/">Douglas Bates</a></font></th>
+<th align=left><font size=-1><a href="http://cm.bell-labs.com/stat/jmc/">John Chambers</a></font> </th>
+<th align=left><font size=-1><a href="http://www.public.iastate.edu/~dicook">Di Cook</a></font> </th>  
+</tr>
+<tr>
+<th align=left><font size=-1><a href="http://www.biostat.ku.dk/~pd">Peter Dalgaard</a></font></th>
+<th align=left><font size=-1><a href="http://www.stat.auckland.ac.nz/rgentlem/rgentlem.html">Robert Gentleman</a></font> </th>
+<th align=left><font size=-1><a href="http://www.ci.tuwien.ac.at/~hornik/">Kurt Hornik</a></font></th>
+</tr>
+<tr>
+<th align=left><font size=-1><a href="http://www.stat.auckland.ac.nz/PEOPLE/ihaka/rihaka.html">Ross Ihaka</a></font>  </th>
+<th align=left><font size=-1><a href="http://www.ci.tuwien.ac.at/~leisch/">Friedrich Leisch</a></font> </th>
+<th align=left><font size=-1><a href="http://www.biostat.washington.edu/~thomas/">Thomas Lumley</a></font></th>
+<tr>
+<th align=left><font size=-1><a href="http://stat.ethz.ch/~maechler/">Martin  M&auml;chler</a></font></th>
+<th align=left><font size=-1><a href="http://sirio.stat.unipd.it/">Guido Masarotto</a></font></th>  
+<th align=left><font size=-1><a href="http://www.stat.auckland.ac.nz/PEOPLE/paul/paul.shtml">Paul Murrell</a></font></th>
+</tr>
+<tr>
+<th align=left><font size=-1><a href="http://www-stat.stanford.edu/~naras/">Balasubramanian Narasimhan</a></font></th>  
+<th align=left><font size=-1><a href="http://www.stats.ox.ac.uk/~ripley/">Brian Ripley</a></font></th>
+<th align=left><font size=-1><a href="http://www.statlab.uni-heidelberg.de/people/sawitzki/">G&uuml;nther  Sawitzki</a></font></th>
+</tr>
+<tr>
+<th align=left><font size=-1><a href="http://www.stat.ucdavis.edu/~duncan/">Duncan Temple Lang</a></font></th>
+<th align=left><font size=-1><a href="http://stat.umn.edu/~luke/">Luke Tierney</a></font> </th>
+<th align=left><font size=-1><a href="http://www.cmis.csiro.au/bill.venables/">Bill Venables</a></font></th>
+</tr>
+</table>
+</center>
+<p>
+Participation in the general and special-purpose software work of the
+Omega project is open to anyone interested in our goals.
+The <a href="http://www.omegahat.net/mailman/listinfo/">mailing
+lists</a> are a good place to start; in particular
+<a name="NWD1"></a>
+<a href="mailto:omega-devel@omegahat.net">omega-devel@omegahat.net</a>
+is a list for discussion of the general development of software
+for the project.
+The success of the  Omega project is highly dependent on the
+involvement of a wide range of participants in many different areas.
+We can all benefit.
+<p>
+
+<h2>The Omega Project Umbrella</h2>
+
+As well as developing software ourselves,
+the project also hopes to support other development efforts.
+To this end, Doug Bates has generously allowed his machine to be used
+for distributing code for different projects.
+These projects include.
+<ul>
+  <li> <a href="contrib/RS-DBI/index.html">RS-DBI: Database
+      connectivity for both R and S.</a>
+</ul>
+More general details are <a href="contrib/index.html">also available</a>.
+
+</body> </html>
